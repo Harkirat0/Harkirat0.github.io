@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Harkirat">
+    <meta name="viewport" content="width=device-width">
+    <title>Project - eCommerce Website</title>
+
+    <link rel="stylesheet" href="css/styles_HSi52417.css">
+    <script type="text/javascript" src="script/script_HSi52417.js"></script>
+</head>
+
+<body>
+    <header>
+        <p>Canada's largest eCommerce website</p>
+    </header>
+
+    <nav>
+        <div class="nav-home">
+            <a href="index.html" title="Online Medicine Store"><img src="images/shop-logo.png" class="nav-logo" alt="Logo"></a>
+        </div>
+        <div class="nav-button"><a href="page2_HSi52417.html">Upload Prescription</a></div>
+        <div class="nav-button"><a href="page3_HSi52417.html">Social Handles</a></div>
+    </nav>
+
+    <div id="upload">
+        <h1>
+            Upload Prescription
+        </h1>
+        <form name="form" id="form" action="" method="GET" autocomplete="off">
+            <article id="form">
+                <fieldset>
+                    <legend>Form</legend>
+                    <div>
+                        <label for="name">Patient Name</label>
+                        <input type="text" name="name" id="name" placeholder="John White" required>
+                    </div>
+
+                    <div>
+                        <label for="phone_number">Phone Number</label>
+                        <input type="text" name="phone_number" id="phone_number" placeholder="123 456 7890" pattern="\d{10}" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="john@gmail.com" required>
+                    </div>
+
+                    <div>
+                        <label for="upload_button">Upload files here:</label>
+                        <input type="file" name="upload_button" id="upload_button" accept="image/*,.pdf" multiple required>
+                    </div>
+                </fieldset>
+            </article>
+
+            <div>
+                <input type="submit" name="submit" value="Submit Data" onclick="runValidate(this.form);">
+                <input type="reset" name="clear" value="Clear Input">
+            </div>
+        </form>
+        <article id="upload_info">
+            <div>
+                <h3>What is considered as a valid prescription?</h3>
+                <br>
+                <ul>
+                    <li>Don't upload cropped or blurred images/files.</li>
+                    <li>Include details like doctor's information etc.</li>
+                    <li>Supported file types: pdf, jpeg, png, jpg</li>
+                </ul>
+            </div>
+        </article>
+    </div>
+    <div class="calculator">
+        <h2>Calculate the yearly cost of your medicine with us <span id="vs">V/S</span> others.</h2>
+        <form id="form_cal">
+            <article id="article_cal">
+                <div>
+                    <label for="frequency">Frequency: </label>
+                    <span class="sp00"><input type="radio" name="frequency" id="frequency01" value="Weekly">Weekly</span>
+                    <span class="sp00"><input type="radio" name="frequency" id="frequency01" value="Bi-Weekly">Bi-Weekly</span>
+                    <span class="sp00"><input type="radio" name="frequency" id="frequency02" value="Monthly">Monthly</span>
+                </div>
+                <div>
+                    <label for="med_cost">Cost: </label><span id="dollar">$</span>
+                    <input type="text" name="med_cost" id="med_cost">
+                </div>
+                <div>
+                    <input type="button" name="calculate" id="cal_submit" value="Calculate" onClick="calCost(this.form);">
+                </div>
+            </article>
+        </form>
+        <div id="output">
+            <p id="p_out"></p>
+        </div>
+    </div>
+    <footer>
+        <section id="footer_upper">
+            <table class="tb">
+                <tr>
+                    <td id="td_01">
+                        <h3>Disclaimer</h3>
+                        <p>We does not provide any Medical Advice, Diagnosis, Consultation or Treatment. The sale of medicines is only done by Licensed Pharmacy under the Supervision of PHARMACIST. Please UPLOAD a valid PRESCRIPTION from a registered medical
+                            practitioner.
+                        </p>
+                    </td>
+                    <td id="td_02">
+                        <h3>Newsletter Signup</h3>
+                        <p>Newsletter Sign up to receive e-mails update on our New Product addition, Health Information, WHO news and recommendation, Special Discount offers, events and much more... </p>
+                        <form id="footer_form">
+                            <input type="email" name="email" id="email" placeholder="Your Email ID">
+                            <input type="submit" name="submit" value="Sign Up" id="submit_footer">
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section class="bottom">
+            <hr>
+            <p>&copy; 2021</p>
+        </section>
+    </footer>
+</body>
+
+</html>
